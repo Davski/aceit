@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aceIT</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <a href="/"><img src="../images/logo.png" alt="aceIT"/></a>
+      <h1>Learn it and aceIT</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <article class="course">
+      <div>
+        <h2>Main menu</h2>
+      </div>
+
+      <div id="howTo" onclick="toggleExplainGame()">
+        <p>How to<br>play</p>
+      </div>
+
+      <div class="courseChoice">
+        <ul>
+          <li>Welcome </li>
+          <li id="username">UNKNOW USER</li>
+        </ul>
+        <p>Select a course to play!</p>
+      </div>
+
+      <div id="explainGame">
+        <ul>
+          <li>First you have to choose a course and then a module. 
+            Then you will come in to a ready state and wait for the game start.
+            The game will start within 15 seconds when there are at least 2 players in the game.
+            Otherwise you have to wait until another one joins the game or you can exit to choose another course or module.</li>
+          <li>All players in the same game will compete against each other. 
+            You will get 15 seconds for each question to answer.
+            Your score will be shown at the end of the game.</li>
+        </ul>
+      </div>
+
+      <div class="courseSelect" id="courseForm">
+        <!-- Buttons created by JavaScript will be here -->
+      </div>
+
+      <div class="quit">
+        <p>Changed your mind?</p>
+        <button type="button" id="logOutBtn" onclick="exitTo('logout');">Log out</button>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>
+        &copy; Copyright by aceIT team
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/course.js"></script>
+</body>
+
+</html>

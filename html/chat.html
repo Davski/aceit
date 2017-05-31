@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="expires" content="0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aceIT</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+window.onload = function () {
+    var conversation;
+    var message = document.getElementById("message");
+    var log = document.getElementById("log");
+
+
+    function appendLog(element) {
+        var doScroll = log.scrollTop > log.scrollHeight - log.clientHeight - 1;
+        log.appendChild(element);
+        if (doScroll) {
+            log.scrollTop = log.scrollHeight - log.clientHeight;
+        }
+    }
+
+    
+  document.getElementById("form").onsubmit = function () {
+        if (!conversation) {
+            return false;
+        }
+        if (!message.value) {
+            return false;
+        }
+        conversation.send(message.value);
+        message.value = "";
+        return false;
+    };
+    if (window["WebSocket"]) {
+        conversation = new WebSocket("ws://" +  document.location.host + "/ws");
+        conversation.onclose = function (conver) {
+            var item = document.createElement("div");
+            item.innerHTML = "<b>Server not found</b>";
+            appendLog(item);
+        };
+          conversation.onmessage = function (conver) {
+            var messages = conver.data.split('\n');
+            var i = 0;
+            while (i < messages.length) {
+                var item = document.createElement("div");
+                item.innerText = messages[i];
+                appendLog(item);
+                i++;
+            }
+        };
+    }
+
+};
+
+
+
+</script>
+
+
+<body>
+
+<center>
+  <header>
+    <div class="header">
+</head>
+      <a href="/"><img src="https://s9.postimg.org/dqrphrzi7/logo.png" alt="aceIT"/></a>
+            <h1>Learn it and aceIT</h1>
+    </div>
+  </header>
+    <article class="lobby"></article>
+
+      <div>
+        <h2 id="moduleName"></h2>
+      </div>
+        <div id="log">
+        </div>
+    <form id="form">
+      <input type="submit" value="Send" />
+      <input type="text" id="message" size="64"/>
+    </form>
+
+</center>
+</body>
+
+<style type="text/css">
+html {
+    overflow: hidden;
+}
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+#log {
+    background: DarkTurquoise;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    top: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
+    bottom: 3em;
+    overflow: auto;
+    height: 300px;
+    width: 50%;
+    text-align: center;
+
+
+}
+
+h1 {
+    font-family: 'Baloo', cursive;
+    font-size: 250%;
+    color:  #006666;
+}
+
+#form {
+    padding: 0 0.5em 0 0.5em;
+    margin: 0;
+    bottom: 1em;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+</style>
+
+
+
+
+</html>

@@ -1,0 +1,683 @@
+* {
+	font-family: Roboto, sans-serif;
+	box-sizing: border-box; /*to prevent padding that make the box bigger than the size we define*/
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	color: #006666;
+  	background-color: Ivory;
+}
+
+/*Style input place holder font color*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #d8d7db;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #d8d7db;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #d8d7db;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #d8d7db;
+}
+
+/*--------------------------------STYLE HEADER PART------------------------------*/
+
+.header, .container, .footer {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 1% 0 0 0;
+	text-align: center;
+}
+
+.header img {
+	width: 13%;
+}
+
+h1 {
+	font-family: 'Baloo', cursive;
+	font-size: 250%;
+}
+/*-------------------------------STYLE CONNENT PART-----------------------------*/
+.container {
+	flex: 1;
+	background-color: DarkTurquoise;
+	border: 1px solid #000;
+	padding-bottom: 50px;
+}
+
+article {
+	position: relative;
+	top: 30px; /*Can not use percentage*/
+}
+
+article h2, .courseChoice {
+	text-align: center;
+}
+
+.course, .question {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.main, .signupMain, .module, .lobby, .score {
+	width: 55%;
+	margin: 0 auto;
+}
+
+form {
+	margin-top: 6.45%;
+	height: auto;
+	padding: 4.2% 2%;
+}
+
+form#signInForm, form#signupForm {
+	text-align: center;
+	background-color: Ivory;
+}
+
+#signIn, #signupDiv {
+	max-width: 60%;
+	margin: 0 auto;
+	height: auto;
+}
+
+#signIn li, #signupDiv li {
+	margin-bottom: 3%;
+	text-align: left;
+}
+
+#signIn li input, #signupDiv li input {
+	width: 100%;
+	background: Ivory;
+	margin-top: 2%;
+}
+
+#signIn input, #signupDiv input {
+	padding: 3.5% 1.5%;
+	font-size: 90%;
+	font-style: italic;
+	color: #006666;
+}
+
+#signUp, .quit, #explainGame, .quitTwochoice {
+	margin-top: 3.1%;
+	padding-top: 2.1%;
+	border-top: 1px solid #006666;
+	text-align: center;
+	width: 100%;
+}
+
+.quit, #explainGame, .quitTwochoice {
+	/*position: relative;*/
+	margin: 0 auto;
+	clear: both;
+}
+
+.quit form, .quitAnswer form, .chechAnswer form, .QMain form, .quitTwochoice form {
+	margin: 0;
+	padding: 0;
+}
+
+#explainGame {
+	text-align: justify;
+	margin-top: 1.6%;
+	padding: 1.5% 1% 0 1%;
+	display: none;
+	border-bottom: 1px solid #006666;
+}
+
+#explainGame li {
+	margin-bottom: 1.6%;
+}
+
+#howTo {
+	position: absolute;
+	right: 20px; /*Can not change*/
+	top: 10px;
+	border-radius: 100%;
+    -moz-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border: 2px solid #006666;
+    padding: 1.5%;
+    text-align: center;
+}
+
+#howTo:hover {
+	background: Ivory;
+}
+
+li {
+	list-style-type: none;
+}
+
+input, button {
+	border: 1px solid #006666;
+}
+
+button {
+	font-size: 112%;
+    background-color: #006666;
+	color: Ivory;
+}
+
+button:hover  {
+	background-color: DarkTurquoise;
+}
+
+#signInForm button, #signUp button, #signupForm button, .quit button, #ans button {
+	min-width: 80px; /*Can not change*/
+	padding: 10px; /*Can not change*/
+	margin-top: 10px; /*Can not change*/
+
+}
+
+/*-----------------------------END SING IN AND SIGN UP------------------------------*/
+
+.courseChoice ul li {
+	color: Ivory
+}
+
+.courseChoice ul li {
+	display: inline;
+}
+
+.courseChoice ul, .courseChoice p {
+	margin-top: 1.5%;
+}
+
+#courseForm {
+	/*min-width: 33%;*/
+	margin-top: 4.45%;
+	height: auto;
+	text-align: center;
+}
+
+#courseForm button {
+	float: left;
+    width: 30%;
+    padding: 5.55% 0;
+    letter-spacing: .05em;
+    margin: 0 1.5% 3% 1.5%;
+    text-transform: uppercase;
+}
+
+#moduleForm {
+	/*min-width: 220px;*/
+	/*margin-top: 30px;*/
+	margin-top: 6.3%;
+	height: auto;
+	text-align: center;
+}
+
+#moduleForm button {
+	float: left;
+    /*width: 200px;*/
+    width: 44.5%;
+    padding: 8% 0;
+    letter-spacing: .05em;
+    margin: 0 2.5% 5% 2.5%;
+    text-transform: uppercase;
+}
+
+/*----------------------------END COURSE AND MODULE---------------------------*/
+
+.lobbyMain {
+	height: 272px; /*<-------<----<--<--<--<--<-< THINK AGAIN -------*/
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 6.45%;
+}
+
+.userNameList {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.userNameList li {
+	/*margin-bottom: 10px;*/
+	margin-bottom: 4.7%;
+	background: Ivory;
+	padding: 2.35% 0;
+	font-size: 125%;
+}
+
+.timer {
+	float: right;
+	width: 40%;
+	text-align: center;
+}
+
+.timer p {
+	margin-top: 5.5%;
+	font-size: 450%;
+	padding: 12% 0 12% 0;
+	background: Ivory;
+}
+
+.timer h5 {
+	margin-top: 5%;
+}
+
+#courseName, #moduleName {
+	padding: 1% 0;
+	text-transform: uppercase;
+}
+
+/*---------------------------- END LOBBY ---------------------------*/
+
+.QMain {
+	background: Ivory;
+	width: 100%;
+	padding: 2%;
+	margin-top: 4.4%;
+	margin-bottom: 3%;
+}
+
+#ans, #ans input {
+	margin-top: 6%;
+}
+
+.spanText {
+	margin-left: 2%;
+}
+
+#quzz {
+	width: 90%;
+	margin: 4% auto 0 auto;
+	
+}
+
+#ans {
+	width: 80%;
+	margin: 1.5% auto 0 auto;
+}
+
+#ans button {
+	margin: 13% 0 0 0;
+}
+
+.Qhead {
+	text-align: center;
+}
+
+.Qhead p {
+	margin-top: 0.8%;
+}
+
+.count {
+    width: 15%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 350%;
+    line-height: 1em;
+    border-bottom: 2px solid #006666;
+}
+
+#showResult {
+	position: relative;
+	top: -40px; /*Can not change*/
+	font-size: 190%;
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#showTrue {
+	color: #32cd32;
+	border: 1px solid #32cd32;
+	margin-bottom: 5%;
+}
+
+#showFalse {
+	color: #ff0000;
+	border: 1px solid #ff0000;
+	margin-bottom: 5%;
+}
+
+#toModule {
+	float: left;
+	margin-left: 5%;
+}
+
+#toMain {
+	float: right;
+	margin-right: 5%;
+}
+
+/*---------------------------- END QUESTION ---------------------------*/
+
+.scoreMain {
+	width: 100%;
+	margin: 0 auto 4% auto;
+	text-align: center;
+
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background: Ivory;
+
+}
+
+#userScore table {
+	margin-top: 6.45%;
+}
+
+#playerScore{
+	margin-top: 4.2%;
+	padding-top: 4.2%;
+	border-top: 1px solid #006666;
+	margin-bottom: 4.2%;
+}
+
+tr:nth-child(even) {
+	background-color: Bisque;
+}
+
+th, td {
+	padding: 3.2%;
+	width: 33%;
+}
+
+th {
+    background-color: #006666;
+    color: white;
+}
+
+#showScore {
+	float: left;
+}
+
+/*
+#exitForm {
+	float: right;
+}
+*/
+
+.quitTwochoice button{
+	min-width: 140px; /*Can not change*/
+	padding: 10px; /*Can not change*/
+	margin-top: 10px; /*Can not change*/
+}
+
+/*#hignScoreHead {
+	display: none;
+}*/
+/*-----------STYLE FOOTER PART------------*/
+footer {
+	position: relative;
+	bottom: 0;
+	height: 50px; /*Can not change*/
+	width: 100%;
+	background-color: Ivory;
+}
+
+footer p {
+	padding: 0.5% 0;
+	font-size: 65%;
+}
+
+.footer {
+	text-align: center;
+}
+
+.oops {
+	margin-top: 5%;
+	font-size: 600%;
+	line-height: 1.5em;
+}
+
+/*------------------------------------------MEDIA QUERY------------------------------------------*/
+
+@media screen and (max-width: 768px) and (orientation: landscape){
+	header {
+		display: none;
+	}
+
+	footer {
+		display: none;
+	}
+
+	form#signInForm, form#signupForm, #courseForm, #moduleForm, .lobbyMain, .QMain, #userScore table {
+		margin-top: 3%;
+	}
+
+	.oops {
+		margin-top: 10%;
+		font-size: 500%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.lobbyMain {
+		margin-top: 5%;
+	}
+
+	.oops {
+		font-size: 400%;
+	}
+}
+
+@media screen and (max-width: 480px), (max-width: 768px) {
+
+	.header, .container, .footer {
+		width: 100%;
+		border: none;
+	}
+
+	.header a {
+		float: left;
+		width: 20%;
+		text-align: center;
+	}
+
+	.header img {
+		width: 60%;
+		padding-bottom: 3%;
+
+	}
+
+	.container {
+		padding-bottom: 30px;
+	}
+
+	h1 {
+		width: 80%;
+		float: left;
+		font-size: 180%;
+		text-align: left;
+		padding-top: 3%;
+	}
+
+	.main, .signupMain, .lobby, .score, .question, .course, .module {
+		width: 95%;
+	}
+
+	h2 {
+		font-size: 120%;
+	}
+
+	article {
+		top: 20px; /*Can not use percentage*/
+	}
+
+	.container {
+		clear: both;
+	}
+
+	#signIn, #signupDiv {
+		max-width: 85%;
+	}
+
+	#signIn li, #signupDiv li {
+		margin-bottom: 2%;
+	}
+
+	#signIn li input, #signupDiv li input {
+		margin-top: 2%;
+	}
+	/*
+	#explainGame {
+		position: absolute;
+		background: Ivory;
+		text-align: left;
+		z-index: 1000;
+		border-top: none;
+	}*/
+
+	#howTo {
+		right: 30px; /*Can not change*/
+		top: 0;
+	    padding: 2%;
+	    line-height: 1em;
+	    font-size: 90%;
+	    
+	}
+
+	#signInForm button, #signUp button, #signupForm button, .quit button, #ans button {
+		min-width: 70px; /*Use px. Can not change to be percentage*/
+		font-size: 95%;
+	}
+
+	#courseForm button {
+	    width: 44.5%;
+	    padding: 8% 0;
+	    margin: 0 2.5% 5% 2.5%;
+	}
+
+	.quitTwochoice button{
+		min-width: 125px; /*Can not change*/
+		font-size: 95%;
+	}
+
+	#ans {
+		width: 90%;
+	}
+
+	.count {
+	    font-size: 300%;
+	}
+
+	#showResult {
+		font-size: 145%;
+		width: 40%;
+		left: 25px;
+	}
+
+	footer {
+		height: 30px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	h1 {
+		font-size: 120%;
+		padding-top: 3%;
+	}
+
+	#howTo {
+		right: 10px; /*Can not change*/	    
+	}
+
+	.lobbyMain {
+		height: 250px;
+	}
+
+	.count {
+		width: 20%;
+	}
+
+	#showResult {
+		width: 45%;
+	}
+}
+
+/*
+line-height: 1.5em; prefer em
+word-spacing: 0.3em; prefer em space between words
+letter-spacing: 0.3em; space between letters
+font-weight:
+font-size:
+font-style:
+font-family:
+text-transform: uppercase;
+text-align: right;
+position: relative;
+position: absolute;
+background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-4/htmlcss1-img_soccer.jpeg");
+background-size: cover;
+background-position: center;
+height: 300px;
+min-width: 300px;
+max-width: 600px;
+min-height: 150px;
+max-height: 300px;
+overflow: scroll; for solving the spills problem when the hight is too overflow
+overflow: hidden;
+border: 3px solid rgb(22, 77, 100);
+border-radius: 5px;
+list-item: none; for delete the bullet for list
+display: inline;
+display: block;
+display: inline-block;
+display: none;
+visibility: hidden; a empty space is sitll left
+visibility: visible;
+box-sizing: border-box; for fixed boxes size
+text-decoration: none;
+z-index: 10;
+background: url(http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.png) no-repeat center center;
+background-size: cover;
+background-attachment: fixed or scroll(default)
+background-image: -webkit-linear-gradient(#666CCC, #BC1324);
+display: block; use with tag img. Images can also be centered, but first, their default behavior must be changed. By default, 
+images are inline elements. For images to center properly, they must behave as block-level elements.
+margin: 0px auto; to center the image. float
+<table>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="3"></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+		</tr>
+	</tfoot>
+</table>
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    ruleset for 320px - 480px 
+}
+min-resolution and max-resolution media features. These media features accept a resolution value in either dots per inch (dpi) or dots per centimeter (dpc)
+@media only screen and (min-resolution: 300dpi) {
+    CSS for high resolution screens 
+}
+If only one of multiple media features in a media query must be met, media features can be separated in a comma separated list.
+@media only screen and (min-width: 480px), (orientation: landscape) {
+     CSS ruleset 
+}
+The example above requires only one of the media features to be true for its CSS to apply.
+*/

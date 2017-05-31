@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aceIT</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <a href="/"><img src="../images/logo.png" alt="aceIT"/></a>
+      <h1>Learn it and aceIT</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <article class="question">
+      <div class="Qhead">
+        <h2>Question</h2>
+        <p>Answer within 15 seconds</p>
+      </div>
+
+      <div class="QMain" id="QAndChoiceMain">
+        <div class="count" id="Timecount">
+          <p id="countDown">15</p>
+        </div>
+
+        <div id="quzz">
+          <h3 id="quzzNo"></h3> <!-- Denna rad ska kommentera bort och använder javascript för att lägga till h3 tag och attibute id som har samma name för att sedan ska Question visas här -->
+        </div>
+
+        <div id="ans">
+          <div id="alternatives">
+            <!-- Alternatives added by JavaScript will be here -->
+            <!-- <button type="button" id="answerSubmit" onclick="testAnswer()">Answer</button> -->
+          </div>
+        </div>
+
+        <div id="showResult">
+          <!-- "CORRECT" or "INCORRECT" will be displayed by JavaScript here -->
+          <p id="showAnswer" </p>
+        </div>
+      </div>
+
+      <div class="quit">
+        <p>Change module?</p>
+        <button type="button" id="exitQBtn" onclick="exitTo('modules')">Exit</button>
+      </div> <!-- Jag undrar om man kan använda samma ID här -->
+
+      <div> <!-- What is this div tag for? -->
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>
+        &copy; Copyright by aceIT team
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/question.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

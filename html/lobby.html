@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="expires" content="0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aceIT</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <a href="/"><img src="../images/logo.png" alt="aceIT"/></a>
+      <h1>Learn it and aceIT</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <article class="lobby">
+      <div>
+        <h2 id="moduleName"></h2>
+      </div>
+
+      <div class="lobbyMain">
+        <div class="userNameList" id="userList">
+          <ul id="lobbyList">
+            <!-- <li> tags created by JavaScript will be here -->
+          </ul>
+        </div>
+
+        <div class="timer" id="timerID">
+          <h3>Countdown</h3>
+          <p id="countDown">30</p>
+          <h5>The game will start within 30 seconds when there are at least 2 players in the lobby.</h5>
+        </div>
+      </div>
+      <div class="quitTwochoice">
+        <p>Changed your mind?</p>
+        <div id="toModule">
+          <button type="button" id="toModuleBtn" onclick="exitTo('modules');">Module menu</button>
+        </div>
+        <div id="toMain">
+          <button type="button" id="toMainBtn" onclick="exitTo('courses');">Main menu</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>
+        &copy; Copyright by aceIT team
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/lobby.js"></script>
+</body>
+
+</html>
